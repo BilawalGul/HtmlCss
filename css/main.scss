@@ -1,1 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+body{
+    margin: 0px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    background:rgb(235, 232, 232);
+    height:100vh;
+}
+
+.container{
+    margin: 0 auto;
+    text-align: center;
+
+    .logo{
+        width:100px;
+    }
+
+    h1{
+        margin:1em 0;
+    }
+
+    .left{
+        background:linear-gradient(160deg , rgb(63, 22, 139) 10% , rgb(180, 19, 118) 80%);
+        padding: 1em;
+    }
+
+    h1, p{
+
+        color:#fff;
+    }
+
+    .right > p{
+        color:black;
+        margin:2em 0;
+
+    }
+    .text-light{
+        color: rgb(182, 170, 170);
+        margin-top:2em;
+    }
+
+    input, button{
+        width:calc(100% - 3em);
+        padding:.5em;
+        font-size: 1.3rem;
+        margin:.2em 0;
+        border:none;
+    }
+    button{
+        width:calc(100% - 2em) ;
+        margin:0;
+        background:linear-gradient(120deg , rgb(63, 22, 139) 0% , rgb(180, 19, 118) 100%);
+        color:white;
+        border:none;
+        cursor:pointer;
+
+    }
+
+    img{width:15%;}
+}
+
+@media only screen and (min-width: 768px){
+
+    body{
+        font-size: 20px;
+
+    }
+    button{
+        width: 60% !important;
+    }
+    input {
+        width:58% !important;
+    }
+}
+
+
+@media only screen and (min-width: 1024px){
+
+    body{
+        padding:0;
+    }
+    .logo{
+        margin:1em 0;
+    }
+    p{
+        line-height: 1.6em !important;
+    }
+
+    input,button{
+        margin:.3em 0 !important;
+    }
+    button {
+        width:61.9% !important;
+    }
+
+
+
+    .inner{
+        display: grid;
+        grid-template-columns: 55% auto;
+
+        .left{
+            text-align: left;
+            display: grid;
+            height: 100vh;
+            padding: 0 3em;
+
+            h1{
+                margin:0;
+                font-size: 2em;
+    
+                span{
+                    display: block;
+                }
+            }
+        }
+
+        .right{
+            text-align: right;
+            align-self: center;
+            justify-self:center;
+            justify-content: center;
+            padding: 0  2em 1.5em; 
+
+            input{
+                width:calc(100% - 1em) !important;
+            }
+            button{
+                width:100% !important;
+            }
+            p{
+                text-align: left;
+            }
+
+            .images{  
+                display: inline-block;
+                text-align: left !important;
+            }
+            .arrow{
+                width:30%;
+            }
+        }
+        
+    }
+}
