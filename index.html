@@ -20,9 +20,9 @@
             <div class="left">
                 <img src="images/logo.png" alt="HtmlCss logo" class="logo">
 
-                <h1>Welcome <span>To Complete HtmlCss Page</span> </h1>
-                <p>Exercitation aute voluptate ea cupidatat est elit magna consequat et veniam exercitation laboris id minim. Id consequat adipisicing ad nulla dolore sunt consectetur. Esse commodo dolore nostrud eiusmod minim esse nulla.</p>
-                <p class="text-light">Adipisicing sunt do occaecat exercitation enim ut.</p>
+                <h1 class="thistext">Welcome <span>To Complete HtmlCss Page</span> </h1>
+                <p class="thistext">Exercitation aute voluptate ea cupidatat est elit magna consequat et veniam exercitation laboris id minim. Id consequat adipisicing ad nulla dolore sunt consectetur. Esse commodo dolore nostrud eiusmod minim esse nulla.</p>
+                <p class="text-light thistext">Adipisicing sunt do occaecat exercitation enim ut.</p>
             </div>
             <div class="right">
                 <p>Notify Me when I create New Course</p>
@@ -37,6 +37,21 @@
         </div>
     </div>
 
-    
+    <script>
+        let left = document.querySelector('.left');
+        let protos = document.querySelectorAll('.proto');
+        let thistext = document.querySelector('.thistext');
+
+        left.addEventListener('mousemove', (event) => {
+            let move = (event.clientX * 0.05) + 4;
+            let move2 = (event.clientX * 0.003);
+            thistext.style.transform = `translateX(-${move2}%)`;
+
+            protos.forEach((proto) => {
+                proto.style.transform = `translateX(${move}%)`;
+            })
+        })
+ 
+    </script>
 </body>
 </html>
